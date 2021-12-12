@@ -1,0 +1,75 @@
+{
+  "name": "Crypto Chess",
+  "version": "1.0.0",
+  "description": "Chess on a Ethereum BlockChain Network where winner takes it all",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --content-base static/",
+    "build": "webpack --bail",
+    "build-production": "webpack --bail --config webpack.config-production.js",
+    "test": "mocha-webpack --growl",
+    "test-testrpc": "concurrently --kill-others -s first \"testrpc -p ${TESTRPC_PORT:-8545}\" 'npm run test'",
+    "lint": "jshint app/javascript/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ise-ethereum/on-chain-chess"
+  },
+  "keywords": [
+    "webpack",
+    "decentralized app",
+    "decentralization",
+    "ethereum",
+    "solidity",
+    "dapp",
+    "template"
+  ],
+  "bugs": {
+    "url": "https://github.com/ise-ethereum/on-chain-chess"
+  },
+  "author": "TU Berlin, ISE Ethereum, PSA group",
+  "license": "MIT",
+  "devDependencies": {
+    "@metamask/eslint-config": "^2.0.0",
+    "@metamask/onboarding": "^1.0.0",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "chai": "*",
+    "concurrently": "*",
+    "css-loader": "^0.23.1",
+    "eth-sig-util": "^2.5.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "jshint": "^2.9.2",
+    "jshint-loader": "^0.8.3",
+    "json-loader": "^0.5.4",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "mocha": "^9.1.3",
+    "mocha-webpack": "*",
+    "solc": "^0.8.10",
+    "solc-loader": "git://github.com/Antanukas/solc-loader.git#97ef68cf30a69f43d16953c28a1b44fa14d5ed38",
+    "source-map-support": "*",
+    "style-loader": "^0.13.1",
+    "web3": "^0.15.3",
+    "web3-loader": "git://github.com/Antanukas/web3-loader.git#af4e4ad57fb409360aa5c72866e31be230a2b162",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-node-externals": "*"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "bignumber.js": "^2.3.0",
+    "chess.js": "^0.10.2",
+    "ethers": "^5.5.2",
+    "ganache": "^6.4.5",
+    "ganache-cli": "^6.12.2",
+    "insecure-ethereum-p2p-proxy": "github:ise-ethereum/insecure-ethereum-p2p-proxy",
+    "nvm": "0.0.4",
+    "socket.io": "^4.4.0",
+    "uuid": "^8.3.2",
+    "web3-shh-dropin-for-proxy": "github:ise-ethereum/web3-shh-dropin-for-proxy",
+    "web3modal": "^1.9.4"
+  }
+}
