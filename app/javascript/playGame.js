@@ -252,16 +252,16 @@ module.controller('PlayGameCtrl',
       return false;
     };
 
-    $scope.surrender = function() {
-      $rootScope.$broadcast('message', 'Submitting your surrender, please wait...',
+    $scope.Resign = function() {
+      $rootScope.$broadcast('message', 'Submitting your Resign, please wait...',
         'loading', 'playgame');
       try {
-        SoliChess.surrender($scope.getGameId(), 
+        SoliChess.Resign($scope.getGameId(), 
           {from: $scope.getGame().self.accountId,
             gas: 10000000});
       }
       catch(e) {
-        $rootScope.$broadcast('message', 'Could not submit your surrender',
+        $rootScope.$broadcast('message', 'Could not submit your Resign',
           'error', 'playgame-' + $scope.getGameId());
       }
     };

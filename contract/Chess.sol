@@ -163,8 +163,8 @@ contract Chess is TurnBasedGame, Auth {
        return gameStates[gameId].playerWhite;
     }
 
-    function surrender(bytes32 gameId) notEnded(gameId) public {
-        super.surrender(gameId);
+    function  Resign(bytes32 gameId) notEnded(gameId) public {
+        super.Resign(gameId);
 
         // Update ELO scores
         var game = games[gameId];

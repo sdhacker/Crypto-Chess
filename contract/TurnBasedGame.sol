@@ -127,20 +127,20 @@ contract TurnBasedGame {
     }
 
     /**
-     * Surrender = unilateral declaration of loss
+     * Resign = unilateral declaration of loss
      */
-    function surrender(bytes32 gameId) notEnded(gameId) public {
+    function Resign(bytes32 gameId) notEnded(gameId) public {
         if (games[gameId].winner != 0) {
             // Game already ended
             throw;
         }
         if (games[gameId].player1 == msg.sender) {
-            // Player 1 surrendered, player 2 won
+            // Player 1 Resigned, player 2 won
             games[gameId].winner = games[gameId].player2;
             games[gameId].player2Winnings = games[gameId].pot;
             games[gameId].pot = 0;
         } else if(games[gameId].player2 == msg.sender) {
-            // Player 2 surrendered, player 1 won
+            // Player 2 Resigned, player 1 won
             games[gameId].winner = games[gameId].player1;
             games[gameId].player1Winnings = games[gameId].pot;
             games[gameId].pot = 0;

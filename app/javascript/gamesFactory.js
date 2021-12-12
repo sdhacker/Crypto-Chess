@@ -330,7 +330,7 @@ angular.module('dappChess').factory('games', function (crypto, navigation, gameS
                                 'error', 'claimwin');
         }
         try {
-          Chess.claimWin(game.gameId, {from: game.self.accountId,gas: 10000000});
+          Chess.claimWin(game.gameId, {from: game.self.accountId,gas: 1000000000});
         } catch (e) {
           console.log('claimWin error', e);
           $rootScope.$broadcast('message',
@@ -456,7 +456,7 @@ angular.module('dappChess').factory('games', function (crypto, navigation, gameS
 
         try {
           console.log('Trying to claim ether for game ', game);
-          Chess.withdraw(game.gameId, {from: game.self.accountId,gas: 100000000000000000000000000});
+          Chess.withdraw(game.gameId, {from: game.self.accountId,gas: 1000000000});
           $rootScope.$broadcast('message',
             'Your ether with the amount of ' +
             game.self.wonEther +

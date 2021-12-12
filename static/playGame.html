@@ -43,10 +43,27 @@
       <li>Opponents username: {{getGame().opponent.username}}</li>
     </ul>-->
 
-    <div id="board-{{game.gameId}}" style="width:100%"></div>
+   
 
   </div>
-  <div class="four columns">
+  <div class="row">
+    <div class="six columns">
+
+      <div class="row">
+      <div class="six columns">
+      <h6><strong>{{getGame().self.username}}</strong>
+      {{getGame().opponent.accountId}}</h6>
+      </div>
+    </div>
+     <div id="board-{{game.gameId}}" style="width:100%"></div>
+       <div class="row">
+      <div class="six columns">
+      <h6><strong>{{getGame().self.username}}</strong>
+      {{getGame().self.accountId}}</h6>
+      </div>
+    </div>
+   </div>
+     <div class="four columns">
     <button data-ng-click="claimWin()" data-ng-show="gameCanClaimWin()">Claim Win</button>
     <button data-ng-click="offerDraw()" data-ng-show="gameCanOfferDraw()">Offer Draw</button>
     <button data-ng-click="claimTimeout()" data-ng-show="gameCanClaimTimeout()">Claim Timeout</button>
@@ -59,7 +76,7 @@
     <!--navigation.isActivePage(navigation.initializeGamePage) ||-->
     <!--navigation.isActivePage(navigation.joinGamePage)-->
     <!--}"-->
-    <button data-ng-click="surrender()" data-ng-show="gameIsActive()">Surrender</button>
+    <button data-ng-click="Resign()" data-ng-show="gameIsActive()">Resign</button>
     <button data-ng-click="closeGame()" data-ng-show="!gameIsActive()">Close</button>
     <button data-ng-click="claimEther()" data-ng-show="gameHasClaimableEther()">Claim ether</button>
     <div class="game-log">
@@ -67,4 +84,6 @@
       <p>{{gamePgn}}</p>
     </div>
   </div>
+  </div>
+
 </div>

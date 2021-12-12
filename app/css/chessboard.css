@@ -13,10 +13,10 @@ Customizing the chessboard
 */
 /* The color of the light and dark square on the board. */
 div.chess_board div.chess_square_light {
-  background-color: #ffffff;
+  background-color: #eeeed2;
 }
 div.chess_board div.chess_square_dark {
-  background-color: #e5e1d1;
+  background-color: #769656;
 }
 /* The color of the light and dark squares when selected. */
 div.chess_board div.chess_square_light.chess_square_selected {
@@ -58,14 +58,14 @@ div.chess_board div.chess_square_light.chess_square_moved {
 
 
 div.chess_board div.chess_square_light.chess_square_valid_move {
-  -webkit-box-shadow: inset 0 0 3px 3px #CDE855;
-  -moz-box-shadow: inset 0 0 3px 3px #CDE855;
-  box-shadow: inset 0 0 3px 3px #CDE855;
+  -webkit-box-shadow: inset 0 0 3px 3px #1b03a3;
+  -moz-box-shadow: inset 0 0 3px 3px #1b03a3;
+  box-shadow: inset 0 0 3px 3px #1b03a3;
 }
 div.chess_board div.chess_square_dark.chess_square_valid_move {
-  -webkit-box-shadow: inset 0 0 3px 3px #A7C520;
-  -moz-box-shadow: inset 0 0 3px 3px #A7C520;
-  box-shadow: inset 0 0 3px 3px #A7C520;
+  -webkit-box-shadow: inset 0 0 3px 3px #1b03a3;
+  -moz-box-shadow: inset 0 0 3px 3px #1b03a3;
+  box-shadow: inset 0 0 3px 3px #1b03a3;
 }
 
 
@@ -98,8 +98,11 @@ div.chess_board div.chess_label {
   font-variant: small-caps;
 }
 
-
 /* Chess pieces with unicode characters */
+/* Use this section if you prefer to use images to fonts */
+
+/*
+
 div.chess_board div.chess_player_black.chess_piece_pawn:after {
   content: '\265F';
 }
@@ -137,29 +140,29 @@ div.chess_board div.chess_player_white.chess_piece_king:after {
   content: '\2654';
 }
 
-
+*/
 /* Chess pieces with images */
 
 /* Use this section if you prefer to use images to fonts */
 
-/*
+
 div.chess_board div.chess_player_black.chess_piece_pawn {
-background-image: url('http://upload.wikimedia.org/wikipedia/commons/c/c7/Chess_pdt45.svg');
+background-image: url('http://images.chesscomfiles.com/chess-themes/pieces/neo/150/bp.png');
 }
 div.chess_board div.chess_player_black.chess_piece_rook {
-background-image: url('http://upload.wikimedia.org/wikipedia/commons/f/ff/Chess_rdt45.svg');
+background-image: url('http://images.chesscomfiles.com/chess-themes/pieces/neo/150/br.png');
 }
 div.chess_board div.chess_player_black.chess_piece_knight {
-background-image: url('http://upload.wikimedia.org/wikipedia/commons/e/ef/Chess_ndt45.svg');
+background-image: url('http://images.chesscomfiles.com/chess-themes/pieces/neo/150/bn.png');
 }
 div.chess_board div.chess_player_black.chess_piece_bishop {
-background-image: url('http://upload.wikimedia.org/wikipedia/commons/9/98/Chess_bdt45.svg');
+background-image: url('http://images.chesscomfiles.com/chess-themes/pieces/neo/150/bb.png');
 }
 div.chess_board div.chess_player_black.chess_piece_queen {
-background-image: url('http://upload.wikimedia.org/wikipedia/commons/4/47/Chess_qdt45.svg');
+background-image: url('http://images.chesscomfiles.com/chess-themes/pieces/neo/150/bq.png');
 }
 div.chess_board div.chess_player_black.chess_piece_king {
-background-image: url('http://upload.wikimedia.org/wikipedia/commons/f/f0/Chess_kdt45.svg');
+background-image: url('http://images.chesscomfiles.com/chess-themes/pieces/neo/150/bk.png');
 }
 div.chess_board div.chess_player_white.chess_piece_pawn {
 background-image: url('http://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg');
@@ -179,7 +182,7 @@ background-image: url('http://upload.wikimedia.org/wikipedia/commons/1/15/Chess_
 div.chess_board div.chess_player_white.chess_piece_king {
 background-image: url('http://upload.wikimedia.org/wikipedia/commons/4/42/Chess_klt45.svg');
 }
-*/
+
 
 
 
