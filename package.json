@@ -11,6 +11,9 @@
     "test-testrpc": "concurrently --kill-others -s first \"testrpc -p ${TESTRPC_PORT:-8545}\" 'npm run test'",
     "lint": "jshint app/javascript/*.js"
   },
+    "engines": {
+    "node": "^16.13.x",
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Crypto-chess"
