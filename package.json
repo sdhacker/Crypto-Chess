@@ -12,7 +12,8 @@
     "lint": "jshint app/javascript/*.js"
   },
     "engines": {
-    "node": "^16.13.x",
+    "node": "*",
+    "npm": "*"
   },
   "repository": {
     "type": "git",
