@@ -59,7 +59,7 @@
     "webpack-node-externals": "*"
   },
   "dependencies": {
-    "node":"*",
+    "node":"^16.13.1",
     "async": "^1.5.2",
     "bignumber.js": "^2.3.0",
     "chess.js": "^0.10.2",
