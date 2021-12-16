@@ -1,20 +1,16 @@
-# On Chain Chess
- 
-[![Stories in Ready](https://badge.waffle.io/ise-ethereum/on-chain-chess.svg?label=ready&title=Ready)](http://waffle.io/ise-ethereum/on-chain-chess)
- 
-This application can be used to play chess over the Ethereum block-chain.
-It is build in the scope of a project of the ise TU Berlin.
+#Crypto Chess
+Crypto Chess can be used to play chess over the Ethereum blockchain network
 
 # Information
 
-This is loosely based on [ethereum-webpack-example-dapp](https://github.com/uzyn/ethereum-webpack-example-dapp).
+This is loosely based on [ethereum-webpack-example-dapp](https://githb.com/uzyn/ethereum-webpack-example-dapp).
 
 ## How to run
 
 1. Run a local Ethereum node with JSON-RPC listening at port 8545 _(default)_. [testrpc](https://github.com/ethereumjs/testrpc) would be the most straight-forward method.
 
   ```bash
-  # Using testrpc (recommended)
+  # Using testrpc or ganache(recommended)
   testrpc
 
   # -----------OR-----------
@@ -39,8 +35,6 @@ This is loosely based on [ethereum-webpack-example-dapp](https://github.com/uzyn
   This starts the build process and also a local dev server. Open the given URL in your favorite web browser.
 
   Webpack is now started in `watch` mode, any changes done at JavaScript or Solidity files will automatically rebuild the affected modules.
-
-1. [Run SHH proxy, for P2P functions to work](https://github.com/ise-ethereum/insecure-ethereum-p2p-proxy#usage)
 
 1. Build, for deployment
 
