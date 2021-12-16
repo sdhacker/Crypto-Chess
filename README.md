@@ -1,4 +1,6 @@
-#Crypto Chess
+# Crypto Chess
+
+
 Crypto Chess can be used to play chess over the Ethereum blockchain network
 
 # Information
