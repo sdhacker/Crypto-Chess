@@ -5,7 +5,7 @@ Crypto Chess can be used to play chess over the Ethereum blockchain network
 
 # Information
 
-This is loosely based on [ethereum-webpack-example-dapp](https://githb.com/uzyn/ethereum-webpack-example-dapp).
+You can use
 
 ## How to run
 
