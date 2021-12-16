@@ -1,15 +1,11 @@
 # Crypto Chess
 
 
-Crypto Chess can be used to play chess over the Ethereum blockchain network
-
-# Information
-
-You can use
+Crypto Chess can be used to play chess over the Ethereum blockchain network.
 
 ## How to run
 
-1. You can run on a local Ethereum node with JSON-RPC listening at port 8545 using testrpc or ganache.
+1. You can run on a local Ethereum node with JSON-RPC listening at port 8545 using testrpc or ganache and connect your account with metamask. 
    Or You can also use Polygon Mumbai test network using Metamask.
 
   ```bash
