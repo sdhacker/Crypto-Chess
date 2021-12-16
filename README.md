@@ -9,10 +9,11 @@ This is loosely based on [ethereum-webpack-example-dapp](https://githb.com/uzyn/
 
 ## How to run
 
-1. Run a local Ethereum node with JSON-RPC listening at port 8545 _(default)_. [testrpc](https://github.com/ethereumjs/testrpc) would be the most straight-forward method.
+1. You can run on a local Ethereum node with JSON-RPC listening at port 8545 using testrpc or ganache.
+   Or You can also use Polygon Mumbai test network using Metamask.
 
   ```bash
-  # Using testrpc or ganache(recommended)
+  # Using testrpc or ganache(recommended as Metamask giving some problem on some contracts)
   testrpc
 
   # -----------OR-----------
