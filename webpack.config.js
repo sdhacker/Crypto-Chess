@@ -5,6 +5,8 @@ var rpcport = process.env.TESTRPC_PORT || '8545';
 var web3provider = process.env.WEB3_PROVIDER || 'http://localhost:'+ rpcport;
 const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 
+// Use https://rpc-mumbai.matic.today as web3 provider for polygon Mumbai testnet
+
 web3.eth.getBalance("0x5A0b54D5dc17e0AadC383d2db43B0a0D3E029c4c", function(err, result) {
   if (err) {
     console.log(err)
