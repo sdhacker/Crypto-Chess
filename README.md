@@ -1,20 +1,16 @@
-# On Chain Chess
- 
-[![Stories in Ready](https://badge.waffle.io/ise-ethereum/on-chain-chess.svg?label=ready&title=Ready)](http://waffle.io/ise-ethereum/on-chain-chess)
- 
-This application can be used to play chess over the Ethereum block-chain.
-It is build in the scope of a project of the ise TU Berlin.
+# Crypto Chess
 
-# Information
 
-This is loosely based on [ethereum-webpack-example-dapp](https://github.com/uzyn/ethereum-webpack-example-dapp).
+Crypto Chess can be used to play chess over the Ethereum blockchain network.
 
 ## How to run
 
-1. Run a local Ethereum node with JSON-RPC listening at port 8545 _(default)_. [testrpc](https://github.com/ethereumjs/testrpc) would be the most straight-forward method.
+1. You can run on a local Ethereum node with JSON-RPC listening at port 8545 using testrpc or ganache and connect your account with metamask. 
+   Or You can also use Polygon Mumbai test network using Metamask.
+2. If you want to use Polygon Mumbai Testnet update web3 provider in webpack.config.js
 
   ```bash
-  # Using testrpc (recommended)
+  # Using testrpc or ganache(recommended as Metamask giving some problem on some contracts)
   testrpc
 
   # -----------OR-----------
@@ -40,8 +36,6 @@ This is loosely based on [ethereum-webpack-example-dapp](https://github.com/uzyn
 
   Webpack is now started in `watch` mode, any changes done at JavaScript or Solidity files will automatically rebuild the affected modules.
 
-1. [Run SHH proxy, for P2P functions to work](https://github.com/ise-ethereum/insecure-ethereum-p2p-proxy#usage)
-
 1. Build, for deployment
 
   ```bash
@@ -61,6 +55,4 @@ This is loosely based on [ethereum-webpack-example-dapp](https://github.com/uzyn
 ## FAQ
 
 - _Deployment fails with out-of-gas_  
-  When using testrpc, try raising the gas limit. Install any version newer than this:
-  `npm install -g git://github.com/ethereumjs/testrpc.git#b3ec03eb8e2615453adcea7a93188ceb578a4094`
-  and then run with `testrpc -l 4000000`, for example.
+  When using testrpc / ganache, try raising the gas limit.
