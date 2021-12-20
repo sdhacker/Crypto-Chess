@@ -6,6 +6,7 @@
 .newbutton {
   display: inline-block;
 width: auto;
+height: 50px;
   text-align: center;
 }
 
@@ -29,7 +30,7 @@ width: auto;
           transform: scale(1.2);
 }
 .one:after, .one:before {
-  content: "";
+  content: "  ♚  ";
 }
 .one b {
   color: #DDA6FF;
@@ -54,7 +55,7 @@ width: auto;
           transform: scale(1.2);
 }
 .two:after, .two:before {
-  content: "";
+  content: "  ♞  ";
 }
 .two b {
   color: #FFD9B4;

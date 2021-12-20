@@ -1,8 +1,11 @@
-<div class="container space-top">
-  <h1>Play Crypto Chess</h1>
-  <p>With Crypto-chess, you can play a game of chess on the Ethereum blockchain Network. This means that all moves will be verified independently and publicly documented on blockchain network to makes cheating impossible. </p>
-  <div class="newbutton">
-    <button data-ng-click="navigation.goto(navigation.initializeGamePage)" class="one ">Start new game</button>
-    <button data-ng-click="navigation.goto(navigation.joinGamePage)" class="two ">Join game</button>
+<div class="container mx-auto">
+  <div class="columns-auto">
+  <h1 class=" text-center font-bold leading-normal font-sans text-6xl antialiased ">Play Crypto Chess</h1>
+  <p class=" text-center text-xl leading-normal my-6">With Crypto-chess, you can play a game of chess on the Ethereum blockchain Network. This means that all moves will be verified independently and publicly documented on blockchain network to makes cheating impossible. </p>
+
+  <div class=" grid grid-cols-2 gap-4 my-8 newbutton">
+    <button data-ng-click="navigation.goto(navigation.initializeGamePage)" class="one font-semibold text-xl text-slate-300">Start new game</button>
+    <button data-ng-click="navigation.goto(navigation.joinGamePage)" class="two font-semibold text-xl">Join game</button>
+  </div>
   </div>
 </div>

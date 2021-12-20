@@ -1,21 +1,60 @@
- <div class="container space-top">
-  <h1>Play Game</h1>
+
+ <div class="container mx-auto ">
+  <h1 class="text-center font-bold leading-normal font-sans text-4xl antialiased ">Play Game</h1>
+
 </div>
-<div class="container" data-ng-show="isOpenGame()">
-  <div class="eight columns">
-    <p>Your game has started, but no opponent has joined the game yet.</p>
-    <p>Ether bet: {{getGame().pot}}<br>
+
+
+<!-- Page still no opponent joined game-->
+
+<div class="container mx-auto" data-ng-show="isOpenGame()">
+  <div class="grid grid-flow-col auto-cols-auto gap-8 mt-5">
+    <div class="ml-20" >
+    <p class="text-l leading-normal">Your game has started, but no opponent has joined the game yet.</p>
+    <p class="text-l leading-normal my-4 ">Ether bet: {{getGame().pot}}<br>
       Start color: {{getGame().self.color}}<br>
       Your username: {{getGame().self.username}}<br>
       Account ID used for this game: {{getGame().self.accountId}}</p>
   </div>
-  <div class="four columns">
-    <button data-ng-click="closeGame()">Close game</button>
+  <div class="col-span-1 mr-20">
+    <button class="form"  data-ng-click="closeGame()">Close game</button>
   </div>
 </div>
-<div class="container" data-ng-show="!isOpenGame()">
-  <div class="eight columns">
-    <p data-ng-show="gameIsActive()">
+</div>
+<!----- Live Chess Game page ---------->
+
+<div class="md:container md:mx-auto px-4" data-ng-show="!isOpenGame()">
+  <div class="grid grid-cols-2 gap-8  mt-4">
+    <div class="col-span-auto place-self-center ml-20">
+        <div class="block w-96 h-auto "style="background-color: gray; border-radius:5px ;" >
+          <div class="grid grid-cols-6" >
+            <div class="ml-3">
+           <img class="place-items-start w-10" src="https://avatars.dicebear.com/api/pixel-art/:{{getGame().opponent.accountId}}.svg">
+           </div>
+           <div> 
+            <p class="text-base font-semibold text-black" >{{getGame().opponent.username }}</p>
+            <p class="text-xs italic">{{getGame().opponent.accountId}}</p>
+            </div>
+        </div>
+
+     <div class="block" id="board-{{game.gameId}}" style="width:100%">  </div>
+   <div class="grid grid-cols-6 block" >
+                
+                <div class="ml-3">
+           <img class="place-items-start w-10" src="https://avatars.dicebear.com/api/pixel-art/:{{getGame().self.accountId}}.svg">
+           </div >
+           <div> 
+      <p class="text-base font-semibold text-black" >{{getGame().self.username}}</p>
+      <p class="text-xs italic"> {{getGame().self.accountId}}</p> 
+            </div>
+        </div>
+  </div>
+  </div>
+
+
+     <div class="">
+
+<p data-ng-show="gameIsActive()">
       You are in an ongoing chess game, the pot is at {{game.pot}} Ether.
     </p>
     <p data-ng-show="gameIsWon()">
@@ -43,43 +82,24 @@
       <li>Opponents username: {{getGame().opponent.username}}</li>
     </ul>-->
 
-   
 
-  </div>
-  <div class="row">
-    <div class="six columns">
-
-      <div class="row">
-      <div class="six columns">
-      <h6><strong>{{getGame().self.username}}</strong>
-      {{getGame().opponent.accountId}}</h6>
-      </div>
-    </div>
-     <div id="board-{{game.gameId}}" style="width:100%"></div>
-       <div class="row">
-      <div class="six columns">
-      <h6><strong>{{getGame().self.username}}</strong>
-      {{getGame().self.accountId}}</h6>
-      </div>
-    </div>
-   </div>
-     <div class="four columns">
-    <button data-ng-click="claimWin()" data-ng-show="gameCanClaimWin()">Claim Win</button>
-    <button data-ng-click="offerDraw()" data-ng-show="gameCanOfferDraw()">Offer Draw</button>
-    <button data-ng-click="claimTimeout()" data-ng-show="gameCanClaimTimeout()">Claim Timeout</button>
-    <button data-ng-click="confirmGameEnded()" data-ng-show="gameCanConfirmLoose()">Accept Loose</button>
-    <button data-ng-click="confirmGameEnded()" data-ng-show="gameCanConfirmDraw()">Accept Draw</button>
-    <button data-ng-click="claimTimeoutEnded()" data-ng-show="gameCanClaimTimeoutEnded()">Claim Timeout Ended</button>
+    <button class="form" data-ng-click="claimWin()" data-ng-show="gameCanClaimWin()">Claim Win</button>
+    <button class="form" data-ng-click="offerDraw()" data-ng-show="gameCanOfferDraw()">Offer Draw</button>
+    <button class="form" data-ng-click="claimTimeout()" data-ng-show="gameCanClaimTimeout()">Claim Timeout</button>
+    <button class="form" data-ng-click="confirmGameEnded()" data-ng-show="gameCanConfirmLoose()">Accept Loose</button>
+    <button class="form" data-ng-click="confirmGameEnded()" data-ng-show="gameCanConfirmDraw()">Accept Draw</button>
+    <button class="form" data-ng-click="claimTimeoutEnded()" data-ng-show="gameCanClaimTimeoutEnded()">Claim Timeout Ended</button>
     <!--data-ng-class="{-->
     <!--metapage:-->
     <!--navigation.isActivePage(navigation.welcomePage) ||-->
     <!--navigation.isActivePage(navigation.initializeGamePage) ||-->
     <!--navigation.isActivePage(navigation.joinGamePage)-->
     <!--}"-->
-    <button data-ng-click="Resign()" data-ng-show="gameIsActive()">Resign</button>
-    <button data-ng-click="closeGame()" data-ng-show="!gameIsActive()">Close</button>
-    <button data-ng-click="claimEther()" data-ng-show="gameHasClaimableEther()">Claim ether</button>
+    <button class="form" data-ng-click="Resign()" data-ng-show="gameIsActive()">Resign</button>
+    <button class="form" data-ng-click="closeGame()" data-ng-show="!gameIsActive()">Close</button>
+    <button class="form" data-ng-click="claimEther()" data-ng-show="gameHasClaimableEther()">Claim ether</button>
     <div class="game-log">
+
       <p>{{gameStatus}} <span countdown="game.currentTimeout" data-ng-show="gameIsActive()"></span></p>
       <p>{{gamePgn}}</p>
     </div>
@@ -87,3 +107,4 @@
   </div>
 
 </div>
+

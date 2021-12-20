@@ -1,46 +1,49 @@
-<div class="container space-top">
-  <h1>Start new chess game</h1>
+<div class="md:container mx-auto">
+  <h1 class=" text-center font-bold leading-normal font-sans text-5xl antialiased ">Start new chess game</h1>
 </div>
-<div class="container">
-  <div class="four columns">
-    <form name="form" novalidate data-ng-submit="initializeGame(form)">
-      <input name="selectedAccount" type="hidden" data-ng-model="accounts.selectedAccount" required />
-      <button data-ng-click="accounts.selectOrCreateAccount($event)" class="small">Select account</button>
+<div class="md:container mx-auto mt-8">
+  <div class="grid grid-cols-4 gap-8">
+  <div class="col-start-2 ">
+    <form  class="form" name="form" novalidate data-ng-submit="initializeGame(form)">
+
+      <input class="form" name="selectedAccount" type="hidden" data-ng-model="accounts.selectedAccount" required />
+      <button class="form" data-ng-click="accounts.selectOrCreateAccount($event)" class="small">Select account</button>
       <div
         class="selectedAccount"
         data-ng-show="accounts.selectedAccount"
         data-ng-style="accounts.getBlockie(accounts.selectedAccount)">
         {{accounts.selectedAccountName}}
       </div>
-
+      
       <div data-ng-show="form.$submitted || form.selectedAccount.$touched">
         <div class="error" data-ng-show="form.selectedAccount.$error.required">Please select an account.</div>
       </div>
 
       <span data-ng-show="accounts.selectedAccount">Balance: {{accounts.getBalance(accounts.selectedAccount)}}</span><br>
-      <span data-ng-show="accounts.selectedAccount">Elo Score: {{accounts.getEloScore(accounts.selectedAccount)}}</span>
+      <span data-ng-show="accounts.selectedAccount">Elo Score: {{accounts.getEloScore(accounts.selectedAccount)}}</span><br>
+<br>
 
-      <label for="etherbet">Bet (in ether)</label>
-      <input id="etherbet" type="number" name="etherbet" data-ng-model="etherbet" required>
+      <label class="form" for="etherbet">Bet (in ether)</label>
+      <input class="form" id="etherbet" type="number" name="etherbet" data-ng-model="etherbet" style="color:#000" required>
       <div data-ng-show="form.$submitted || form.etherbet.$touched">
         <div class="error" data-ng-show="form.etherbet.$error.required">Please enter your ether bet.</div>
       </div>
 
-      <label for="username">Username</label>
-      <input id="username" type="text" name="username" data-ng-model="username" required>
+      <label class="form" for="username">Username</label>
+      <input class="form" id="username" type="text" name="username" data-ng-model="username" style="color:#000" required>
       <div data-ng-show="form.$submitted || form.username.$touched">
         <div class="error" data-ng-show="form.username.$error.required">Please enter a username.</div>
       </div>
 
-      <label for="turntime">Turntime (in minutes)</label>
-      <input id="turntime" type="number" min="5" step="1" pattern="\d+" name="turntime" data-ng-model="turntime" required>
+      <label class="form" for="turntime">Turntime (in minutes)</label>
+      <input class="form" id="turntime" type="number" min="5" step="1" pattern="\d+" name="turntime" data-ng-model="turntime" style="color:#000"  required>
       <div data-ng-show="form.$submitted || form.turntime.$touched">
         <div class="error" data-ng-show="form.turntime.$error.required">Please enter a turn time.</div>
         <div class="error" data-ng-hide="form.turntime.$error.required || form.turntime.$valid">Please enter a valid turn time (minimum 5).</div>
       </div>
 
-      <label for="startcolor">Start color</label>
-      <select id="startcolor" name="startcolor" data-ng-model="startcolor" required>
+      <label class="form" for="startcolor">Start color</label>
+      <select class="form" id="startcolor" name="startcolor" data-ng-model="startcolor" style="color:#000" required>
         <option value="white" selected>White</option>
         <option value="black">Black</option>
       </select>
@@ -48,12 +51,12 @@
         <div class="error" data-ng-show="form.startcolor.$error.required">Please select a start color.</div>
       </div>
 
-      <input type="submit" value="Start game" />
+      <input class="form" type="submit" value="Start game" />
     </form>
   </div>
-  <div class="eight columns">
+  <div class="col-start-3 col-span-2 mr-10">
     <p><strong>Start off with a new chess game by following these simple steps:</strong></p>
-    <ul>
+    <ul class="list-disc list-inside">
       <li>Select the account to use, enter your username and select the start color to start a game</li>
       <li>You can bet ether. If you do, it is substracted from your account immediatly. </li>
        <li>Your opponent has to match the bet. The winner gets the pot. In case of a draw the pot is split. </li>
@@ -63,5 +66,6 @@
       <li>Once another player has joined, the game begins.
         You will also receive a notification about this.</li>
     </ul>
-  </div>
+</div>
+</div>
 </div>

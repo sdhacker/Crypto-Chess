@@ -2,10 +2,17 @@
 <html data-ng-app="dappChess">
   <head>
     <title>Crypto Chess</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@codolog/form@1.0.0/dist/form.css">
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,400italic' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.3.1/css/simple-line-icons.css">
     <link type="text/css" rel="stylesheet" href="bundles/styles.css">
-    <link type="text/css" rel="stylesheet" href="https://res.cloudinary.com/dzgtid5mj/raw/upload/v1639167450/logomin_rqcouz.css">
+    <link type="text/css" rel="stylesheet" href="https://res.cloudinary.com/dzgtid5mj/raw/upload/v1639948517/logomin_ucyada.css">
+
+    <link rel="stylesheet" href="dist/simple-notify.min.css" />
+<script src="dist/simple-notify.min.js"></script>
   </head>
   <body data-ng-controller="NavigationCtrl" data-ng-class="{
       metapage:
@@ -13,12 +20,13 @@
         navigation.isActivePage(navigation.initializeGamePage) ||
         navigation.isActivePage(navigation.joinGamePage)
   }">
-  <div  >
+  <div >
   <h1 id="logostyle"> <span class="text_2">Not a Satta</span>
   <span class="text_1">Crypto</span>
     <span id="hub">Chess</span>
     </h1>
  </div>
+
     <div class="bg-overlay"></div>
 
 
@@ -66,15 +74,25 @@
 
     <!-- content-->
     <main>
-      <div id="messages" data-ng-controller="MessagesCtrl">
+      <div class="messages notify-is-right notify-is-top" data-ng-controller="MessagesCtrl">
         <div class="messageContainer" data-ng-repeat="message in messages">
           <div class="message" data-ng-class="message.type + ' animate-repeat'">
             {{message.message}}
           </div>
         </div>
       </div>
-      <div id="view" data-ng-view></div>
+
+
+  <!-- Add pages from another HTML -->
+      <div id="view" data-ng-view> </div>
+
+
+
+
+
     </main>
+
+
 
     <div id="overlay"></div>
     <div id="layers">

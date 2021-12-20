@@ -1,4 +1,4 @@
-/**
+/*
  * Chess contract
  * Stores any amount of games with two players and current state.
  * State encoding:

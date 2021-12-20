@@ -165,22 +165,22 @@ div.chess_board div.chess_player_black.chess_piece_king {
 background-image: url('http://images.chesscomfiles.com/chess-themes/pieces/neo/150/bk.png');
 }
 div.chess_board div.chess_player_white.chess_piece_pawn {
-background-image: url('http://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg');
+background-image: url('http://images.chesscomfiles.com/chess-themes/pieces/neo/150/wp.png');
 }
 div.chess_board div.chess_player_white.chess_piece_rook {
-background-image: url('http://upload.wikimedia.org/wikipedia/commons/7/72/Chess_rlt45.svg');
+background-image: url('http://images.chesscomfiles.com/chess-themes/pieces/neo/150/wr.png');
 }
 div.chess_board div.chess_player_white.chess_piece_knight {
-background-image: url('http://upload.wikimedia.org/wikipedia/commons/7/70/Chess_nlt45.svg');
+background-image: url('http://images.chesscomfiles.com/chess-themes/pieces/neo/150/wn.png');
 }
 div.chess_board div.chess_player_white.chess_piece_bishop {
-background-image: url('http://upload.wikimedia.org/wikipedia/commons/b/b1/Chess_blt45.svg');
+background-image: url('http://images.chesscomfiles.com/chess-themes/pieces/neo/150/wb.png');
 }
 div.chess_board div.chess_player_white.chess_piece_queen {
-background-image: url('http://upload.wikimedia.org/wikipedia/commons/1/15/Chess_qlt45.svg');
+background-image: url('http://images.chesscomfiles.com/chess-themes/pieces/neo/150/wq.png');
 }
 div.chess_board div.chess_player_white.chess_piece_king {
-background-image: url('http://upload.wikimedia.org/wikipedia/commons/4/42/Chess_klt45.svg');
+background-image: url('http://images.chesscomfiles.com/chess-themes/pieces/neo/150/wk.png');
 }
 
 

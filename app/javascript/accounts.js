@@ -3,15 +3,19 @@ import {web3, Chess} from '../../contract/Chess.sol';
 angular.module('dappChess').factory('accounts', function () {
   let accounts = {
     // Use the first 5 accounts for mist or firefox and the last 5 for other browsers
-    availableAccounts: (typeof(mist) !== 'undefined' ||
+     availableAccounts: (typeof(mist) !== 'undefined' ||
     window.navigator.userAgent.indexOf
     ('Firefox') !== -1) ? web3.eth.accounts.slice(0, Math.floor
     (web3.eth.accounts.length / 2)) : web3.eth.accounts.slice(Math.floor
     (web3.eth.accounts.length / 2), web3.eth.accounts.length),
+    defaultAccount: web3.eth.defaultAccount, 
+    selectedAccount :getAccounts(function(result) {
+    console.log(result[0]);
+}),
     
-    defaultAccount: web3.eth.defaultAccount, selectedAccount: null,
     selectedAccountName: null,
     
+
     // Get ether balance with 4 digit precision
     getBalance: function(account) {
       if(web3.eth.accounts.indexOf(account) !== -1) {
@@ -19,7 +23,6 @@ angular.module('dappChess').factory('accounts', function () {
           web3.eth.getBalance(account), 'ether'
         ).toDigits(20, 3).toString(10);
       }
-
       return false;
     },
 
@@ -47,6 +50,22 @@ angular.module('dappChess').factory('accounts', function () {
       }
     }
   };
+
+if(window.ethereum) {
+    ethereum.enable();
+};
+function getAccounts(callback) {
+    web3.eth.getAccounts((error,result) => {
+        if (error) {
+            console.log(error);
+        } else {
+            callback(result);
+        }
+    });
+
+};
+
+
   accounts.isSelectedAccount = function(account) {
     return accounts.selectedAccount === account;
   };
