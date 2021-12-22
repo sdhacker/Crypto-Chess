@@ -5,9 +5,8 @@ Crypto Chess can be used to play chess over the Ethereum blockchain network.
 
 ## How to run
 
-1. You can run on a local Ethereum node with JSON-RPC listening at port 8545 using testrpc or ganache and connect your account with metamask. 
-   Or You can also use Polygon Mumbai test network using Metamask.
-2. If you want to use Polygon Mumbai Testnet update web3 provider in webpack.config.js
+1. You can run on a local Ethereum node with JSON-RPC listening at port 8545 using testrpc or ganache.
+2. USE in Uncognito Window or Disable Metamask to use it because there is some bug in my codes that giving error with metamask result in blank screen on website.
 
   ```bash
   # Using testrpc or ganache(recommended as Metamask giving some problem on some contracts)
