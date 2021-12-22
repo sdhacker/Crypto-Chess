@@ -6,7 +6,7 @@ Crypto Chess can be used to play chess over the Ethereum blockchain network.
 ## How to run
 
 1. You can run on a local Ethereum node with JSON-RPC listening at port 8545 using testrpc or ganache.
-2. USE in Uncognito Window or Disable Metamask to use it because there is some bug in my codes that giving error with metamask result in blank screen on website.
+2. USE in incognito Window or disable Metamask to use it because there is some bug in my codes that giving error with metamask result in blank screen on website.
 
   ```bash
   # Using testrpc or ganache(recommended as Metamask giving some problem on some contracts)
